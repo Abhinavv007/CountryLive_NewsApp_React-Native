@@ -12,9 +12,9 @@ const Card = ({item,navigation}) => {
       <Text className="text-sm font-extrabold text-2xl text-black" >{item.title!=="[Removed]"?item.title:"Haryana MLA Reacts To BJP MP's 'Dabdaba' Claim After Wrestling Body Rapped"}</Text>
       <View className="py-3">
       <Text className=" text-base font-medium-100 text-black">{item.description!=="[Removed]"?item.description:"Haryana MLA Reacts To BJP MP's 'Dabdaba' Claim After Wrestling Body Rapped"}</Text>
-      <Text className=" py-4">{item.author?item.author : "Daniel Bryan"}</Text>
-      <Text >{item.publishedAt}</Text>
-      <Text className="my-2">{item.source.name!=="[Removed]"? item.source.name:"The Tribune"}</Text>
+      <Text className=" py-4 text-black ">{item.author?item.author : "Daniel Bryan"}</Text>
+      <Text className="text-black" >{item.publishedAt}</Text>
+      <Text className="my-2 text-black font-bold">{item.source.name!=="[Removed]"? item.source.name:"The Tribune"}</Text>
       <TouchableOpacity onPress={()=>navigation.navigate("NewsView",{
         url:item.url
       })} className=" rounded-md bg-redPrimary w-28  py-2 h-10 justify-center items-center mt-2  " >
